@@ -1,0 +1,10 @@
+*.pyc
+*.bak
+*.*~
+*.log
+*.swp
+*.table
+errors/*
+databases/*
+sessions/*
+__pycache__/*
