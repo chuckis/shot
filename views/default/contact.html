@@ -1,14 +1,17 @@
-{{left_sidebar_enabled,right_sidebar_enabled=False,('message' in globals())}}
+
 {{extend 'plugin_boorish/layout.html'}}
 
-<div>
-	<div id="randomfont">{{=XML(rand_quote)}} </div>
+<h1>Contact Page</h1>
+<div class="left">
 
+	<h2 style="font-size: 30px">contact us</h2>
+
+     {{=form}}
+	
 </div>
 
 
 
-<div id="page">
 	
 <div id="recent-posts">
 	<h3> Last messages </h3>
@@ -17,14 +20,6 @@
 			<li> {{=message.contactmessage}}</li> {{pass}}
 	</ul>
 </div>
-   
-    
 
-</div>
-
-{{block right_sidebar}}
-
-
-{{end}}
 
 

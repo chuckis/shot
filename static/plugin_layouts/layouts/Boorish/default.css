@@ -1,0 +1,322 @@
+/*
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+*/
+
+body {
+	margin: 0;
+	padding: 0;
+	background: url(images/bg1.png) repeat-x;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+/*
+	font-size: 13px;
+*/
+	color: #666666;
+}
+
+form {
+	margin: 0 0 20px 0;
+	padding: 0;
+}
+
+fieldset {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+input, textarea, select {
+	font: normal 1em "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+h1, h2 {
+	font-weight: normal;
+	color: #666666;
+}
+
+h1 {
+	letter-spacing: -1px;
+	font-size: 2.6em;
+}
+
+h2 {
+	font-size: 1.8em;
+}
+
+h3 {
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+p, ul, ol {
+}
+
+p {
+}
+
+blockquote {
+	font-style: italic;
+}
+
+ul {
+}
+
+ol {
+}
+
+a {
+	color: #000;
+	text-decoration: none;
+	text-transform: lowercase;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+small {
+}
+
+hr {
+	display: none;
+}
+
+img {
+	border: none;
+}
+
+img.left {
+	float: left;
+	margin: 0 15px 0 0;
+}
+
+img.right {
+	float: left;
+	margin: 0 0 0 15px;
+}
+
+/* Header */
+
+#header {
+	width: 920px;
+	height: 190px;
+	background: url(images/bg1.png) repeat-x;
+	margin: 0 auto;
+}
+
+/* Logo */
+
+#logo {
+	float: left;
+	padding: 20px 40px;
+	height: 175px;
+	-webkit-border-bottom-right-radius: 250px;
+    -webkit-border-bottom-left-radius: 250px;
+    -moz-border-radius-bottomright: 250px;
+    -moz-border-radius-bottomleft: 250px;
+    border-bottom-right-radius: 250px;
+    border-bottom-left-radius: 250px;
+    background-color: maroon;
+}
+
+#logo h1, #logo h2 {
+	margin: 0;
+	text-transform: lowercase;
+}
+
+#logo h1 {
+	padding-top: 25px;
+	text-align: center;
+	font-size: 4em;
+	color: rgb(120, 120, 120)
+}
+
+#logo h1 a {
+	display: block;
+	color: rgb(120, 120, 120)
+}
+
+#logo h2 {
+	margin-top: -5px;
+	letter-spacing: -1px;
+	font-size: 1.8em;
+	color: rgb(120, 120, 120)
+}
+
+#logo h2 a {
+	color: rgb(120, 120, 120)
+}
+
+#logo a {
+	text-decoration: none;
+}
+
+/* Menu */
+
+#menu {
+	float: right;
+	height: 190px;
+}
+
+#menu ul {
+	margin: 0;
+	list-style: none;
+}
+
+#menu li {
+	display: inline;
+}
+
+#menu a {
+	display: block;
+	float: left;
+	height: 140px;
+	padding: 60px 20px 0px 20px;
+	text-align: center;
+	text-decoration: none;
+	text-transform: lowercase;
+	font-size: 1.6em;
+	color: black;
+}
+
+#menu a:hover {
+	height: 145px;
+	background-color: maroon;
+}
+
+#menu .current_page_item a {
+	background-color: maroon;
+	color: #FFFFFF;
+}
+
+/* Page */
+
+#page {
+	width: 920px;
+	margin: 0 auto;
+	padding-top: 20px;
+	min-height: 300px;
+	padding-bottom: 50px;
+}
+
+#latest-post {
+	float: left;
+	width: 570px;
+	padding: 0px 20px 0px 10px;
+}
+
+#recent-posts {
+	float: right;
+	width: 190px;
+	background: url(images/img03.gif) repeat-y;
+	padding: 0px 10px 20px 20px;
+}
+
+#recent-posts .entry {
+	background: url(images/img04.gif) repeat-x left bottom;
+}
+
+.post {
+}
+
+.post .title {
+	margin: 0;
+}
+
+.post .meta {
+	margin: 0;
+	padding-bottom: 10px;
+	line-height: normal;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #BABABA;
+}
+
+.post .meta a {
+	color: #BABABA;
+}
+
+.post .entry {
+	margin-bottom: 10px;
+	padding-bottom: 5px;
+}
+
+/* Sidebar */
+.right {
+	float: right;
+}
+.left {
+	float: left;
+}
+
+#sidebar {
+	clear: both;
+	width: 20%;
+	color: black;
+}
+
+#sidebar ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#sidebar li {
+	display: block;
+	float: left;
+	width: 200px;
+	padding: 15px;
+}
+
+#sidebar li ul {
+	line-height: 1.8em;
+}
+
+#sidebar li li {
+	display: list-item;
+	float: none;
+	width: auto;
+	padding: 0;
+}
+
+#sidebar h2 {
+	margin: 0 0 15px 0;
+	color: #008C00;
+}
+
+#sidebar a {
+	text-decoration: none;
+	color: #008C00;
+}
+
+#sidebar a:hover {
+	text-decoration: underline;
+}
+
+/* Footer */
+
+#footer {
+	clear: both;
+   padding: 20px;
+	width: 920px;
+	height: 100px;
+	margin: 0 auto;
+	background: url(images/footer_bg.jpg) repeat-x;
+}
+
+#footer p a {
+	margin: 0;
+	padding: 15px;
+	color: white;
+}
+
+#legal {
+	float: left;
+}
+
+#links {
+	float: right;
+}
+ 
+#randomfont { width: 530px; float: left; clear: both;}
+#randomfont span{display: inline-block;} </style> 

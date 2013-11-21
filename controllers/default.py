@@ -8,7 +8,7 @@
 ## - download is for downloading files uploaded in the db (does streaming)
 ## - call exposes all registered services (none by default)
 #########################################################################
-
+from gluon.custom_import import track_changes; track_changes(True)
 
 def index():
     """
@@ -17,9 +17,13 @@ def index():
 
     if you need a simple wiki simply replace the two lines below with:
     return auth.wiki()
+    
     """
-    response.flash = T("Welcome to web2py!")
-    return dict(message=T('Hello World'))
+    from applications.shot.modules.module_randquota.randomfontsize import random_font_text
+    rand_quote = random_font_text
+    messages = db(db.contact.contactmessage).select()
+    response.flash = T("WELCOME!")
+    return dict(messages=messages, rand_quote=rand_quote)
 
 
 def user():
@@ -56,6 +60,19 @@ def call():
     supports xml, json, xmlrpc, jsonrpc, amfrpc, rss, csv
     """
     return service()
+    
+
+
+def contact():
+    form=SQLFORM(db.contact,fields=['contactname','contactemail','contactmessage', 'pict'])
+    if form.process().accepted:
+        response.flash = 'form accepted'
+    elif form.errors:
+        response.flash = 'form has errors'
+    else:
+        response.flash = 'please fill out the form'
+    messages = db(db.contact.contactmessage).select()
+    return dict(form=form, messages=messages)
 
 
 @auth.requires_signature()
@@ -80,9 +97,7 @@ def privacy():
     
     
 def about():
-    return dict()  
-    
-    
-    
-    
-    
+    return dict()
+
+def help():
+    return dict()

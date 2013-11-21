@@ -78,6 +78,22 @@ use_janrain(auth, filename='private/janrain.key')
 ## >>> rows=db(db.mytable.myfield=='value').select(db.mytable.ALL)
 ## >>> for row in rows: print row.id, row.myfield
 #########################################################################
+import datetime
+
+VALUE=""
+
+db.define_table('contact',
+   Field('contactname',requires=IS_NOT_EMPTY()),
+   Field('contactemail',requires=IS_EMAIL()),
+   Field('contactmessage','text',default=VALUE),
+   Field('created',default=str(datetime.datetime.now())),
+   Field('pict', 'upload')
+   )
+
+db.contact.pict.requires=IS_EMPTY_OR(IS_IMAGE(extensions=('jpeg', 'png', '.gif'),
+                                            error_message=['image']))
+                                            
+
 
 ## after defining tables, uncomment below to enable auditing
-# auth.enable_record_versioning(db)
+auth.enable_record_versioning(db)
