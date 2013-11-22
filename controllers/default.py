@@ -10,6 +10,8 @@
 #########################################################################
 from gluon.custom_import import track_changes; track_changes(True)
 
+
+
 def index():
     """
     example action using the internationalization operator T and flash
@@ -19,8 +21,11 @@ def index():
     return auth.wiki()
     
     """
-    from applications.shot.modules.module_randquota.randomfontsize import random_font_text
-    rand_quote = random_font_text
+    from applications.shot.modules.module_randquota.randomfontsize import read_words, getRandStyle
+    quotes_text = '/home/ruslan/yourtext.txt'
+    quotation = read_words(quotes_text)
+    quoTat = getRandStyle(quotation)
+    rand_quote = " ".join(quoTat)
     messages = db(db.contact.contactmessage).select()
     response.flash = T("WELCOME!")
     return dict(messages=messages, rand_quote=rand_quote)

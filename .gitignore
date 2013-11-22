@@ -7,4 +7,6 @@
 errors/*
 databases/*
 sessions/*
+uploads/*
+cache/*
 __pycache__/*
